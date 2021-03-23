@@ -19,7 +19,7 @@ STARTING_POINT_X = -BOARD_SIZE * SQUARE_SIZE // 2
 sc = turtle.Screen()
 
 # create turtle object
-pen = turtle.Turtle()
+pen = turtle.Turtle('turtle')
 
 
 # method to draw square
