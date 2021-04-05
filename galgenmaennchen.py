@@ -9,8 +9,6 @@ turtle.write(lines, font=style_line, align="center")
 lines_as_list = list(lines)
 
 turtle.hideturtle()
-turtle.undo()
-schrift = turtle.clone()
 while True:
     letter = str(input("Choose a letter: "))
     if letter.upper() in word.upper():
