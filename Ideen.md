@@ -1,6 +1,9 @@
 Ideen für Kinderkurs
 ====================
 - Galgenmännchen
+  - Strichmännchen zeichnen:
+    - `turtle.position()`
+    - `turtle.goto(x, y)`
   - Voraussetzungen `Turtle`:
     - `turtle.color`
     - Stil definieren `(font, size, shape)`
