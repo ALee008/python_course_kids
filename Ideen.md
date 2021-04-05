@@ -1,0 +1,30 @@
+Ideen für Kinderkurs
+====================
+- Galgenmännchen
+  - Voraussetzungen `Turtle`:
+    - `turtle.color`
+    - Stil definieren `(font, size, shape)`
+    - `turtle.hideturtle()`
+    - `turtle.up`
+    - `turtle.goto(x, y)` --> Koordinatensystem zeigen
+    - `turtle.write`
+  - Voraussetzungen *Python*:
+    - `input` Befehl`
+    - `print` Befehl
+    - `str.upper()`
+    - was ist eine **Liste**?
+      - wie fügt man ein Element hinzu?
+      - wie fragt man ein Element ab?
+      - wie erstellt man wieder ein Wort aus einer Liste?
+    - `if`-`else Bedingungen
+      - wie prüft man ob etwas **gleich** ist?
+      - wie prüft man ob etwas in einer **Liste** ist?
+    - `for` Schleifen
+      - `break`
+      - `continue`
+    - `enumerate` kennenlernen
+  - Vorgehen:
+    - Zunächst nur die Überschrift zeichen
+    - 
+- Pong
+- Glücksrad
