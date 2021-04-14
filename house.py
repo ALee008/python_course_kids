@@ -1,5 +1,4 @@
 import turtle
-import time
 
 
 def gehe_zum_startpunkt(x, y):
@@ -113,11 +112,14 @@ if __name__ == '__main__':
     # Beachtet: nicht zu hoch oder zu tief einstellen, sonst kann es zu komischen Effekten kommen.
     START_PUNKT_X, START_PUNKT_Y = -200, -200
     # hier koennt ihr die Hausbreite einstellen
-    HAUS_BREITE, HAUS_HOEHE = 280, 350
+    HAUS_BREITE, HAUS_HOEHE = 400, 350
     gehe_zum_startpunkt(START_PUNKT_X, START_PUNKT_Y)
     # ab hier faengt die Zeichnung an
     male_rechteck(HAUS_BREITE, HAUS_HOEHE)
+    # Hier koennt ihr die Farbe der Tuer aendern indem ihr statt "brown" z.B. "blue" eintragt
     male_tuer(0.25 * HAUS_BREITE, 0.6 * HAUS_HOEHE, "brown")
+    # Hier laesst sich die Hoehe und die Farbe des Daches aendern
     male_dach(dach_hoehe=20, farbe="red")
+    # Hier laesst sich die Groesse und Farbe des Fensters aendern.
     male_fenster(40, "yellow")
-    time.sleep(1)
+
