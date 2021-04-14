@@ -70,7 +70,7 @@ def male_dach(dach_hoehe: float, farbe: str ="white"):
     :param dach_hoehe: die gewuenschte Dachhoehe
     :param farbe: gewuenschte Farbe fuer das Dach
     """
-    mitte_des_daches = START_PUNKT_X + HAUS_BREITE / 2, -START_PUNKT_Y + dach_hoehe
+    mitte_des_daches = START_PUNKT_X + HAUS_BREITE / 2, HAUS_HOEHE + dach_hoehe
     stift.up()
     stift.goto(START_PUNKT_X, START_PUNKT_Y + HAUS_HOEHE)
     stift.down()
@@ -79,6 +79,7 @@ def male_dach(dach_hoehe: float, farbe: str ="white"):
     stift.goto(mitte_des_daches)
     stift.goto(START_PUNKT_X + HAUS_BREITE, START_PUNKT_Y + HAUS_HOEHE)
     stift.end_fill()
+
     return None
 
 
@@ -94,7 +95,7 @@ def male_fenster(laenge: float, farbe: str ="white"):
     stift.down()
     male_quadrat(laenge, farbe)
     stift.up()
-    rechtes_fenster_x, rechtes_fenster_y = -linkes_fenster_x - 0.1 * HAUS_BREITE, linkes_fenster_y
+    rechtes_fenster_x, rechtes_fenster_y = START_PUNKT_X + HAUS_BREITE - 2 * laenge, linkes_fenster_y
     stift.goto(rechtes_fenster_x, rechtes_fenster_y)
     stift.down()
     male_quadrat(laenge, farbe)
@@ -105,13 +106,18 @@ def male_fenster(laenge: float, farbe: str ="white"):
 if __name__ == '__main__':
     stift = turtle.Turtle("turtle")
     stift.getscreen()
+    # hier koennt ihr die Geschwindigkeit der Schildkroete einstellen:
+    # "slowest", "slow", "normal", "fast", "fastest"
     stift.speed("fast")
+    # hier koennt ihr den Startpunkt des Hauses einstellen.
+    # Beachtet: nicht zu hoch oder zu tief einstellen, sonst kann es zu komischen Effekten kommen.
     START_PUNKT_X, START_PUNKT_Y = -200, -200
-    HAUS_BREITE, HAUS_HOEHE = 400, 350
+    # hier koennt ihr die Hausbreite einstellen
+    HAUS_BREITE, HAUS_HOEHE = 280, 350
     gehe_zum_startpunkt(START_PUNKT_X, START_PUNKT_Y)
     # ab hier faengt die Zeichnung an
     male_rechteck(HAUS_BREITE, HAUS_HOEHE)
-    male_tuer(100, 200, "brown")
-    male_dach(dach_hoehe=80, farbe="red")
+    male_tuer(0.25 * HAUS_BREITE, 0.6 * HAUS_HOEHE, "brown")
+    male_dach(dach_hoehe=20, farbe="red")
     male_fenster(40, "yellow")
     time.sleep(1)
